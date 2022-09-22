@@ -1,3 +1,4 @@
+% run this before the simulink pleaseeeeee
 % this really isnt ideal but works 
 clear;clc;
 load("telemetry2.mat");
