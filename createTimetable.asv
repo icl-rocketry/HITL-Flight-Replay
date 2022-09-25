@@ -53,12 +53,11 @@ an=table2timetable(telemetry(:,33),'RowTimes',time);
 ae=table2timetable(telemetry(:,34),'RowTimes',time);
 ad=table2timetable(telemetry(:,35),'RowTimes',time);
 
-time_adjust = seconds(0); time_adjust.Format='hh:mm:ss.SSS';
-
+time_adjust = seconds(5); time_adjust.Format='hh:mm:ss.SSS'
 figure
 hold on
 plot(time,telemetry.gps_alt./1000,'-b',LineWidth=1.2)
 plot(time,telemetry.baro_alt,'-r',LineWidth=1.2)
-plot(time-time_adjust,telemetry.pd,'-k',LineWidth=1.2)
+plot(time-seconds(4,telemetry.pd,'-k',LineWidth=1.2)
 grid on 
 legend('GPS', 'Baro','PD')
