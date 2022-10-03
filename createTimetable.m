@@ -57,7 +57,8 @@ time_adjust = seconds(0); time_adjust.Format='hh:mm:ss.SSS';
 
 figure
 hold on
-plot(time,telemetry.gps_alt./1000,'-b',LineWidth=1.2)
+plot(time,telemetry.gps_alt./1000 ...
+    ,'-b',LineWidth=1.2)
 plot(time,telemetry.baro_alt,'-r',LineWidth=1.2)
 plot(time-time_adjust,telemetry.pd,'-k',LineWidth=1.2)
 grid on 
