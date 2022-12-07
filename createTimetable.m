@@ -5,6 +5,7 @@ load("telemetry2.mat");
 time=seconds(table2array(telemetry(:,36)));
 time = (time-time(1))./10^6;
 time.Format='hh:mm:ss.SSS';
+time_time = table2timetable(telemetry(:,36),'RowTimes',time)
 
 % create timeseries
 gps_long=table2timetable(telemetry(:,1),'RowTimes',time);
